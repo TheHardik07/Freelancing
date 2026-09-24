@@ -25,27 +25,139 @@
         <meta name="twitter:description" content="Professional Web Developer specializing in React, Next.js, Node.js, and WordPress. Explore my latest projects, experience, and contact details.">
         <meta name="twitter:image" content="https://www.hardikrathod.me/images/og-preview.png">
 
+        <!-- Canonical Tag for SEO -->
+        <link rel="canonical" href="https://www.hardikrathod.me/" />
+
         <!-- Schema.org JSON-LD Structured Data for Google SEO -->
         <script type="application/ld+json">
         {
           "@context": "https://schema.org",
-          "@type": "Person",
-          "name": "Hardik Rathod",
-          "jobTitle": "Web Developer",
-          "url": "https://github.com/TheHardik07",
-          "sameAs": [
-            "https://www.linkedin.com/in/hardik-rathod-7b12bb282",
-            "https://github.com/TheHardik07"
-          ],
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Vadodara",
-            "addressRegion": "Gujarat",
-            "addressCountry": "India"
-          },
-          "email": "thehardikrathod87@gmail.com",
-          "telephone": "+91-7698831599",
-          "description": "Computer Engineering graduate and Web Developer with hands-on experience building responsive, high-performance websites and web applications using React, Next.js, Express, and WordPress."
+          "@graph": [
+            {
+              "@type": "Person",
+              "@id": "https://www.hardikrathod.me/#person",
+              "name": "Hardik Rathod",
+              "jobTitle": "Full-Stack Web Developer & AI Solutions Engineer",
+              "url": "https://www.hardikrathod.me/",
+              "sameAs": [
+                "https://www.linkedin.com/in/hardik-rathod-7b12bb282",
+                "https://github.com/TheHardik07",
+                "https://blog.hardikrathod.me"
+              ],
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Vadodara",
+                "addressRegion": "Gujarat",
+                "addressCountry": "India"
+              },
+              "email": "thehardikrathod87@gmail.com",
+              "telephone": "+91-7698831599",
+              "description": "Full-Stack Web Developer and Computer Engineer specializing in React, Next.js, Node.js, Headless WordPress, and AI Chatbot integrations."
+            },
+            {
+              "@type": "ProfessionalService",
+              "@id": "https://www.hardikrathod.me/#service",
+              "name": "Hardik Rathod Web Development & AI Solutions",
+              "url": "https://www.hardikrathod.me/",
+              "priceRange": "$95 - $240",
+              "currenciesAccepted": "USD, INR",
+              "paymentAccepted": "Stripe, Razorpay, Wire Transfer",
+              "areaServed": "Worldwide",
+              "provider": {
+                "@id": "https://www.hardikrathod.me/#person"
+              },
+              "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "Web Development Services",
+                "itemListElement": [
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Basic Web Package",
+                      "description": "Custom responsive landing page or starter site with sub-second performance."
+                    },
+                    "price": "95",
+                    "priceCurrency": "USD"
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Medium Web App & CMS Package",
+                      "description": "Dynamic web app or Headless WordPress setup with custom APIs and CMS."
+                    },
+                    "price": "155",
+                    "priceCurrency": "USD"
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Ultra Full-Stack & SaaS MVP Package",
+                      "description": "Full SaaS MVP build with authentication, database, payment gateway, and AI chatbot integration."
+                    },
+                    "price": "240",
+                    "priceCurrency": "USD"
+                  }
+                ]
+              }
+            },
+            {
+              "@type": "FAQPage",
+              "@id": "https://www.hardikrathod.me/#faq",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "What is your typical project delivery timeline?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Basic landing pages are delivered within 3-5 business days. Medium dynamic web apps take 7-10 business days. Complex SaaS MVPs and AI integrations take 2-3 weeks."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Do I get full ownership of the source code and design?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, 100%. Upon project completion, you receive full intellectual property rights, complete GitHub repository access, and clean, documented source code."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "What technologies and frameworks do you build with?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "I build with modern JavaScript/TypeScript, React, Next.js (App Router), Node.js, Express, Tailwind CSS, Headless WordPress, Supabase, PostgreSQL, MongoDB, and OpenAI APIs."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How does payment work for international and Indian clients?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Payments are processed securely via Stripe, Wire Transfer, or Razorpay/UPI with milestone-based invoicing (50% upfront, 50% upon final approval and live deployment)."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Can you integrate custom AI chatbots or automate workflows?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. I build real-time streaming conversational AI assistants using OpenAI, Anthropic, and the Vercel AI SDK to automate support and user onboarding."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Do you provide post-launch support and maintenance?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Every project includes post-launch testing and warranty bug fixes. Ongoing monthly retainers are also available for continuous feature development."
+                  }
+                }
+              ]
+            }
+          ]
         }
         </script>
 
@@ -108,6 +220,7 @@
                             <li class="menu-item"><a href="#awards" class="inner-link nav-link">Experience</a></li> 
                             <li class="menu-item"><a href="#blog" class="inner-link nav-link">Blog</a></li> 
                             <li class="menu-item"><a href="#pricing" class="inner-link nav-link">Pricing</a></li> 
+                            <li class="menu-item"><a href="#faq" class="inner-link nav-link">FAQs</a></li> 
                             <li class="menu-item"><a href="#contact" class="inner-link nav-link">Contact</a></li>
                         </ul>
                     </div> 
@@ -594,29 +707,329 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <!-- start interactive cost estimator -->
+                            <div class="row mt-5 pt-3">
+                                <div class="col-lg-10 mx-auto">
+                                    <div class="card border border-color-light-medium-gray border-radius-16px p-40px sm-p-25px bg-white shadow-sm">
+                                        <div class="row align-items-center mb-3">
+                                            <div class="col-md-8">
+                                                <span class="fs-12 fw-700 text-uppercase px-2 py-1 border-radius-4px" style="background: #f0fdfa; color: #0f766e; border: 1px solid #ccfbf1;">Interactive Estimator</span>
+                                                <h3 class="fs-24 fw-700 text-dark-gray mt-2 mb-1">Customize Your Project Estimate</h3>
+                                                <p class="fs-14 text-muted mb-0">Select your scope and optional integrations to get an immediate cost and timeline breakdown.</p>
+                                            </div>
+                                            <div class="col-md-4 text-md-end mt-3 mt-md-0">
+                                                <div class="p-3 border-radius-10px d-inline-block text-center" style="background: #f8fafc; border: 1px solid #e2e8f0;">
+                                                    <span class="fs-12 text-muted d-block text-uppercase fw-600">Estimated Investment</span>
+                                                    <span id="calc-total-usd" class="fs-32 fw-800" style="color: #0f766e;">$155</span>
+                                                    <span id="calc-total-inr" class="fs-12 d-block text-muted fw-600">(~ ₹12,900 INR)</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <hr class="my-4 border-color-light-medium-gray">
+                                        
+                                        <!-- Step 1: Base Tier -->
+                                        <div class="mb-4">
+                                            <label class="fs-14 fw-700 text-uppercase text-dark-gray mb-3 d-block">1. Select Core Architecture:</label>
+                                            <div class="row g-3">
+                                                <div class="col-md-4">
+                                                    <label class="estimator-option w-100 p-3 border border-radius-8px cursor-pointer d-block transition-all" style="border-color: #cbd5e1;">
+                                                        <input type="radio" name="base-plan" value="95" data-plan="Basic Landing Page" data-days="3-5 Days" class="me-2 calc-trigger">
+                                                        <strong class="d-block text-dark-gray">Basic Landing Page</strong>
+                                                        <span class="fs-13 text-muted">1-3 Pages ($95)</span>
+                                                    </label>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <label class="estimator-option w-100 p-3 border border-radius-8px cursor-pointer d-block transition-all selected-estimator" style="border-color: #0f766e; background: #f0fdfa;">
+                                                        <input type="radio" name="base-plan" value="155" data-plan="Medium Web App" data-days="7-10 Days" checked class="me-2 calc-trigger">
+                                                        <strong class="d-block" style="color: #0f766e;">Medium Dynamic App</strong>
+                                                        <span class="fs-13 text-muted">5-8 Pages + CMS ($155)</span>
+                                                    </label>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <label class="estimator-option w-100 p-3 border border-radius-8px cursor-pointer d-block transition-all" style="border-color: #cbd5e1;">
+                                                        <input type="radio" name="base-plan" value="240" data-plan="Ultra SaaS MVP" data-days="2-3 Weeks" class="me-2 calc-trigger">
+                                                        <strong class="d-block text-dark-gray">Ultra SaaS MVP</strong>
+                                                        <span class="fs-13 text-muted">Full-Stack Application ($240)</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Step 2: Add-on Capabilities -->
+                                        <div class="mb-4">
+                                            <label class="fs-14 fw-700 text-uppercase text-dark-gray mb-3 d-block">2. Optional Add-ons & Integrations:</label>
+                                            <div class="row g-3">
+                                                <div class="col-md-6">
+                                                    <label class="addon-option w-100 p-3 border border-radius-8px cursor-pointer d-flex align-items-center justify-content-between transition-all" style="border-color: #e2e8f0;">
+                                                        <div>
+                                                            <input type="checkbox" value="45" data-addon="Headless CMS" class="me-2 calc-addon-trigger">
+                                                            <span class="fw-600 text-dark-gray fs-14">Headless CMS Setup</span>
+                                                            <small class="d-block text-muted">WPGraphQL / Supabase editor</small>
+                                                        </div>
+                                                        <span class="badge bg-light text-dark fw-600">+$45</span>
+                                                    </label>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label class="addon-option w-100 p-3 border border-radius-8px cursor-pointer d-flex align-items-center justify-content-between transition-all" style="border-color: #e2e8f0;">
+                                                        <div>
+                                                            <input type="checkbox" value="40" data-addon="Payment Gateway" class="me-2 calc-addon-trigger">
+                                                            <span class="fw-600 text-dark-gray fs-14">Stripe / Razorpay Integration</span>
+                                                            <small class="d-block text-muted">Checkout & billing portal</small>
+                                                        </div>
+                                                        <span class="badge bg-light text-dark fw-600">+$40</span>
+                                                    </label>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label class="addon-option w-100 p-3 border border-radius-8px cursor-pointer d-flex align-items-center justify-content-between transition-all" style="border-color: #e2e8f0;">
+                                                        <div>
+                                                            <input type="checkbox" value="60" data-addon="AI Chatbot" class="me-2 calc-addon-trigger">
+                                                            <span class="fw-600 text-dark-gray fs-14">AI Assistant / Chatbot</span>
+                                                            <small class="d-block text-muted">OpenAI streaming widget</small>
+                                                        </div>
+                                                        <span class="badge bg-light text-dark fw-600">+$60</span>
+                                                    </label>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label class="addon-option w-100 p-3 border border-radius-8px cursor-pointer d-flex align-items-center justify-content-between transition-all" style="border-color: #e2e8f0;">
+                                                        <div>
+                                                            <input type="checkbox" value="30" data-addon="SEO Audit" class="me-2 calc-addon-trigger">
+                                                            <span class="fw-600 text-dark-gray fs-14">Advanced SEO & 100/100 CWV</span>
+                                                            <small class="d-block text-muted">Schema markup + speed tuning</small>
+                                                        </div>
+                                                        <span class="badge bg-light text-dark fw-600">+$30</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center pt-3 border-top border-color-light-medium-gray">
+                                            <div class="mb-3 mb-sm-0">
+                                                <span class="fs-14 text-dark-gray">Estimated Timeline: <strong id="calc-timeline" style="color: #0f766e;">7-10 Business Days</strong></span>
+                                            </div>
+                                            <a id="calc-inquiry-btn" href="#" class="btn btn-medium btn-base-color btn-rounded fw-600 text-white" style="background-color: #0f766e; border-color: #0f766e;">
+                                                Inquire with this Configuration <i class="feather icon-feather-arrow-right ms-1"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end interactive cost estimator -->
                         </div>
                     </div>
                 </div>
             </section>
             <!-- end pricing section -->
+
+            <!-- start faq section -->
+            <section id="faq" class="pt-5 pb-5 sm-pt-35px sm-pb-35px">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="row align-items-center mb-6" data-anime='{ "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                                <div class="col-10">
+                                    <span class="text-base-color fw-700 text-uppercase fs-14 ls-05px">Frequently Asked Questions</span>
+                                </div>
+                                <div class="col-2 text-end"> 
+                                    <span class="text-base-color fs-14 fw-700">06</span>
+                                </div>
+                                <div class="col-12 mt-5px"> 
+                                    <div class="separator-line-2px w-100 d-block bg-base-color"></div>
+                                </div>
+                            </div>
+                            <div class="row justify-content-between align-items-end mb-5">
+                                <div class="col-lg-8">
+                                    <h2 class="fs-45 sm-fs-32 text-black fw-700 ls-minus-1px mb-10px">Everything You Need To Know</h2>
+                                    <p class="fs-17 text-muted mb-0">Clear answers about development processes, code ownership, tech stacks, and milestones.</p>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center">
+                                <div class="col-lg-10">
+                                    <div class="accordion accordion-style-02" id="portfolioFAQ">
+                                        <!-- FAQ Item 1 -->
+                                        <div class="accordion-item mb-3 border border-color-light-medium-gray border-radius-8px overflow-hidden">
+                                            <h3 class="accordion-header m-0" id="faqHeading1">
+                                                <button class="accordion-button fs-18 fw-700 text-dark-gray bg-white shadow-none px-4 py-3" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1" aria-expanded="true" aria-controls="faqCollapse1">
+                                                    What is your typical project delivery timeline?
+                                                </button>
+                                            </h3>
+                                            <div id="faqCollapse1" class="accordion-collapse collapse show" aria-labelledby="faqHeading1" data-bs-parent="#portfolioFAQ">
+                                                <div class="accordion-body px-4 py-3 text-muted fs-15 lh-26 bg-very-light-gray">
+                                                    Basic landing pages are delivered within <strong>3–5 business days</strong>. Medium dynamic web applications and headless CMS setups typically take <strong>7–10 business days</strong>. Comprehensive SaaS MVPs and AI chatbot tools take <strong>2–3 weeks</strong>. Every timeline is agreed upon in writing before starting.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- FAQ Item 2 -->
+                                        <div class="accordion-item mb-3 border border-color-light-medium-gray border-radius-8px overflow-hidden">
+                                            <h3 class="accordion-header m-0" id="faqHeading2">
+                                                <button class="accordion-button collapsed fs-18 fw-700 text-dark-gray bg-white shadow-none px-4 py-3" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
+                                                    Do I get 100% full ownership of the source code and designs?
+                                                </button>
+                                            </h3>
+                                            <div id="faqCollapse2" class="accordion-collapse collapse" aria-labelledby="faqHeading2" data-bs-parent="#portfolioFAQ">
+                                                <div class="accordion-body px-4 py-3 text-muted fs-15 lh-26 bg-very-light-gray">
+                                                    Yes, 100%. Upon project completion and final handover, all intellectual property rights, full GitHub repository ownership, and all production assets belong entirely to you with zero vendor lock-in.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- FAQ Item 3 -->
+                                        <div class="accordion-item mb-3 border border-color-light-medium-gray border-radius-8px overflow-hidden">
+                                            <h3 class="accordion-header m-0" id="faqHeading3">
+                                                <button class="accordion-button collapsed fs-18 fw-700 text-dark-gray bg-white shadow-none px-4 py-3" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
+                                                    What technologies and frameworks do you specialize in?
+                                                </button>
+                                            </h3>
+                                            <div id="faqCollapse3" class="accordion-collapse collapse" aria-labelledby="faqHeading3" data-bs-parent="#portfolioFAQ">
+                                                <div class="accordion-body px-4 py-3 text-muted fs-15 lh-26 bg-very-light-gray">
+                                                    I specialize in modern JavaScript/TypeScript architectures including <strong>React, Next.js (App Router), Node.js, Express, Tailwind CSS, custom WordPress (Headless / WPGraphQL), Supabase, PostgreSQL, MongoDB</strong>, and <strong>OpenAI / Vercel AI SDK</strong> streaming integrations.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- FAQ Item 4 -->
+                                        <div class="accordion-item mb-3 border border-color-light-medium-gray border-radius-8px overflow-hidden">
+                                            <h3 class="accordion-header m-0" id="faqHeading4">
+                                                <button class="accordion-button collapsed fs-18 fw-700 text-dark-gray bg-white shadow-none px-4 py-3" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse4" aria-expanded="false" aria-controls="faqCollapse4">
+                                                    How does payment work for international and domestic clients?
+                                                </button>
+                                            </h3>
+                                            <div id="faqCollapse4" class="accordion-collapse collapse" aria-labelledby="faqHeading4" data-bs-parent="#portfolioFAQ">
+                                                <div class="accordion-body px-4 py-3 text-muted fs-15 lh-26 bg-very-light-gray">
+                                                    I accept international payments via <strong>Stripe, Wise, and International Wire Transfer</strong>, as well as Indian domestic payments via <strong>UPI, NEFT, and Razorpay</strong>. We follow a standard milestone model: 50% upfront deposit to initiate development, and 50% upon final milestone approval and live deployment.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- FAQ Item 5 -->
+                                        <div class="accordion-item mb-3 border border-color-light-medium-gray border-radius-8px overflow-hidden">
+                                            <h3 class="accordion-header m-0" id="faqHeading5">
+                                                <button class="accordion-button collapsed fs-18 fw-700 text-dark-gray bg-white shadow-none px-4 py-3" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse5" aria-expanded="false" aria-controls="faqCollapse5">
+                                                    Can you integrate custom AI chatbots or LLM automations?
+                                                </button>
+                                            </h3>
+                                            <div id="faqCollapse5" class="accordion-collapse collapse" aria-labelledby="faqHeading5" data-bs-parent="#portfolioFAQ">
+                                                <div class="accordion-body px-4 py-3 text-muted fs-15 lh-26 bg-very-light-gray">
+                                                    Yes! I implement sub-200ms edge streaming AI conversational widgets using OpenAI APIs and the Vercel AI SDK, capable of automated customer support, context-aware Q&A from your documentation, and internal workflow automations.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- FAQ Item 6 -->
+                                        <div class="accordion-item border border-color-light-medium-gray border-radius-8px overflow-hidden">
+                                            <h3 class="accordion-header m-0" id="faqHeading6">
+                                                <button class="accordion-button collapsed fs-18 fw-700 text-dark-gray bg-white shadow-none px-4 py-3" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse6" aria-expanded="false" aria-controls="faqCollapse6">
+                                                    Do you provide post-launch support and bug fixes?
+                                                </button>
+                                            </h3>
+                                            <div id="faqCollapse6" class="accordion-collapse collapse" aria-labelledby="faqHeading6" data-bs-parent="#portfolioFAQ">
+                                                <div class="accordion-body px-4 py-3 text-muted fs-15 lh-26 bg-very-light-gray">
+                                                    Yes. Every project includes post-launch testing, warranty bug fixes, and handover documentation. Ongoing monthly retainers are also available if you need continuous feature development and server maintenance.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end faq section -->
         </main>
         <!-- start footer section -->
         <footer id="contact" class="position-relative overflow-hidden pb-0">
             <img src="images/circle-bg.png" class="position-absolute top-0px right-minus-100px" alt=""> 
             <div class="container position-relative">
                 <img src="images/sphere.png" class="position-absolute top-20px right-minus-100px d-none d-md-block" alt="">
-                <div class="row">
-                    <div class="col-md-12 position-relative"> 
-                        <div class="fs-70 md-fs-50 sm-fs-40 ls-minus-3px fw-700 text-black mb-10px sm-ls-minus-1px">Let's build something amazing together.</div>
-                        <div class="d-flex align-items-center">
-                            <i class="bi bi-envelope icon-extra-large md-icon-large me-10px text-base-color align-middle"></i>
-                            <a href="mailto:thehardikrathod87@gmail.com" class="fs-50 sm-fs-40 text-base-color fw-600 align-middle ls-minus-3px sm-ls-minus-1px">thehardikrathod87@gmail.com</a>
+                <div class="row align-items-center g-5 pb-5">
+                    <!-- Left Column: Trust Badges & Direct Contact -->
+                    <div class="col-lg-6 position-relative"> 
+                        <div class="fs-60 md-fs-45 sm-fs-35 ls-minus-2px fw-700 text-black mb-20px">Let's build something amazing together.</div>
+                        <p class="fs-17 text-muted mb-30px">Have a project in mind, need a custom quote, or want to discuss full-stack development? Reach out directly or fill out the quick inquiry form.</p>
+                        
+                        <div class="d-flex flex-wrap align-items-center gap-3 mb-35px">
+                            <a href="mailto:thehardikrathod87@gmail.com" class="fs-22 sm-fs-17 text-base-color fw-700 ls-minus-1px text-decoration-underline">thehardikrathod87@gmail.com</a>
+                            <button id="copy-email-btn" class="btn btn-small btn-rounded btn-transparent-dark-gray fw-600 px-3 py-1 fs-13 d-inline-flex align-items-center" onclick="copyEmailToClipboard(event)">
+                                <i class="feather icon-feather-copy me-1"></i> <span id="copy-text">Copy Email</span>
+                            </button>
                         </div>
-                    </div> 
+
+                        <!-- Trust & Quality Badges (CRO) -->
+                        <div class="row g-3">
+                            <div class="col-sm-6">
+                                <div class="p-3 border border-color-light-medium-gray border-radius-8px bg-white d-flex align-items-center">
+                                    <i class="feather icon-feather-zap fs-24 text-base-color me-3"></i>
+                                    <div>
+                                        <strong class="d-block text-dark-gray fs-14">100% Core Web Vitals</strong>
+                                        <span class="fs-12 text-muted">Sub-second load times</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="p-3 border border-color-light-medium-gray border-radius-8px bg-white d-flex align-items-center">
+                                    <i class="feather icon-feather-shield fs-24 text-base-color me-3"></i>
+                                    <div>
+                                        <strong class="d-block text-dark-gray fs-14">Strict NDA & IP Rights</strong>
+                                        <span class="fs-12 text-muted">100% code ownership</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="p-3 border border-color-light-medium-gray border-radius-8px bg-white d-flex align-items-center">
+                                    <i class="feather icon-feather-clock fs-24 text-base-color me-3"></i>
+                                    <div>
+                                        <strong class="d-block text-dark-gray fs-14">Guaranteed Milestones</strong>
+                                        <span class="fs-12 text-muted">On-time delivery</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="p-3 border border-color-light-medium-gray border-radius-8px bg-white d-flex align-items-center">
+                                    <i class="feather icon-feather-message-square fs-24 text-base-color me-3"></i>
+                                    <div>
+                                        <strong class="d-block text-dark-gray fs-14">Direct 1-on-1 Access</strong>
+                                        <span class="fs-12 text-muted">No middlemen or delays</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Interactive Quick Inquiry Form -->
+                    <div class="col-lg-6">
+                        <div class="card border border-color-light-medium-gray border-radius-16px p-40px sm-p-25px bg-white shadow-sm">
+                            <span class="fs-12 fw-700 text-uppercase px-2 py-1 border-radius-4px mb-2 d-inline-block" style="background: #f0fdfa; color: #0f766e; border: 1px solid #ccfbf1; width: fit-content;">Fast Response (Within 4 Hours)</span>
+                            <h3 class="fs-22 fw-700 text-dark-gray mb-3">Send a Project Inquiry</h3>
+                            <form id="contact-inquiry-form" onsubmit="handleInquirySubmit(event)">
+                                <div class="mb-3">
+                                    <label class="form-label fs-13 fw-600 text-dark-gray mb-1">Your Name</label>
+                                    <input type="text" id="inq-name" class="form-control border-radius-6px p-3 fs-14" placeholder="e.g. Alex Johnson" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label fs-13 fw-600 text-dark-gray mb-1">Your Email</label>
+                                    <input type="email" id="inq-email" class="form-control border-radius-6px p-3 fs-14" placeholder="alex@company.com" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label fs-13 fw-600 text-dark-gray mb-1">Interested Plan / Scope</label>
+                                    <select id="inq-plan" class="form-select border-radius-6px p-3 fs-14">
+                                        <option value="Basic Plan ($95)">Basic Plan ($95) — Landing Page / Starter Site</option>
+                                        <option value="Medium Plan ($155)" selected>Medium Plan ($155) — Dynamic Web App / CMS</option>
+                                        <option value="Ultra Plan ($240)">Ultra Plan ($240) — SaaS MVP / Full-Stack</option>
+                                        <option value="Custom Project / AI Integration">Custom Project / AI Solution</option>
+                                    </select>
+                                </div>
+                                <div class="mb-4">
+                                    <label class="form-label fs-13 fw-600 text-dark-gray mb-1">Project Summary / Requirements</label>
+                                    <textarea id="inq-msg" rows="3" class="form-control border-radius-6px p-3 fs-14" placeholder="Tell me briefly about what you want to build..." required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-medium btn-base-color btn-rounded fw-600 w-100 text-white py-3 fs-15" style="background-color: #0f766e; border-color: #0f766e;">
+                                    Send Project Inquiry <i class="feather icon-feather-send ms-2"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
-                <div class="row g-0 align-items-center border-top border-2 border-color-dark-gray pt-30px mt-6 mb-3">
+                <div class="row g-0 align-items-center border-top border-2 border-color-dark-gray pt-30px mt-4 mb-3">
                     <div class="col-md-7 last-paragraph-no-margin sm-mb-20px">
-                        <p>Available for hiring. Based in Vadodara, Gujarat, India. Open to remote contracts and full-stack software engineer roles.</p>
+                        <p>Available for hiring worldwide. Based in Vadodara, Gujarat, India. Open to freelance contracts and full-stack software engineer roles.</p>
                     </div>
                     <div class="col-md-5 elements-social social-text-style-01 text-start text-md-end sm-mb-20px">
                         <ul class="medium-icon dark fw-600">
@@ -648,6 +1061,160 @@
           gtag('js', new Date());
 
           gtag('config', 'G-DND93RJKBT');
+        </script>
+
+        <!-- Floating Quick-Hire CTA (CRO) -->
+        <div class="position-fixed bottom-0 end-0 m-4 z-index-999 d-none d-sm-block">
+            <a href="#contact" class="btn btn-small btn-rounded fw-700 shadow-lg text-white px-3 py-2 d-flex align-items-center" style="background-color: #0f766e; border: 2px solid #ffffff; box-shadow: 0 10px 25px rgba(15, 118, 110, 0.35);">
+                <span style="width: 8px; height: 8px; background: #34d399; border-radius: 50%; display: inline-block; margin-right: 8px; box-shadow: 0 0 8px #34d399;"></span> Available for Work &rarr;
+            </a>
+        </div>
+
+        <!-- Custom CRO & Interactive Handlers -->
+        <script>
+          function copyEmailToClipboard(e) {
+              if (e) e.preventDefault();
+              var email = 'thehardikrathod87@gmail.com';
+              if (navigator.clipboard && window.isSecureContext) {
+                  navigator.clipboard.writeText(email).then(function() {
+                      showCopiedFeedback();
+                  }).catch(function() {
+                      fallbackCopy(email);
+                  });
+              } else {
+                  fallbackCopy(email);
+              }
+          }
+
+          function fallbackCopy(text) {
+              var textArea = document.createElement("textarea");
+              textArea.value = text;
+              textArea.style.position = "fixed";
+              textArea.style.left = "-999999px";
+              document.body.appendChild(textArea);
+              textArea.focus();
+              textArea.select();
+              try {
+                  document.execCommand('copy');
+                  showCopiedFeedback();
+              } catch (err) {
+                  window.location.href = 'mailto:' + text;
+              }
+              document.body.removeChild(textArea);
+          }
+
+          function showCopiedFeedback() {
+              var copyText = document.getElementById('copy-text');
+              if (copyText) {
+                  var original = copyText.textContent;
+                  copyText.textContent = 'Copied to Clipboard!';
+                  setTimeout(function() {
+                      copyText.textContent = original;
+                  }, 2200);
+              }
+          }
+
+          function updateEstimator() {
+              var baseRadio = document.querySelector('input[name="base-plan"]:checked');
+              if (!baseRadio) return;
+
+              var baseCost = parseInt(baseRadio.value, 10) || 155;
+              var basePlan = baseRadio.getAttribute('data-plan') || 'Medium Dynamic App';
+              var timeline = baseRadio.getAttribute('data-days') || '7-10 Days';
+
+              // Visual highlight for base options
+              document.querySelectorAll('.estimator-option').forEach(function(opt) {
+                  var radio = opt.querySelector('input[type="radio"]');
+                  var title = opt.querySelector('strong');
+                  if (radio && radio.checked) {
+                      opt.style.borderColor = '#0f766e';
+                      opt.style.backgroundColor = '#f0fdfa';
+                      if (title) title.style.color = '#0f766e';
+                  } else {
+                      opt.style.borderColor = '#cbd5e1';
+                      opt.style.backgroundColor = '#ffffff';
+                      if (title) title.style.color = '#232323';
+                  }
+              });
+
+              var addonCost = 0;
+              var selectedAddons = [];
+              document.querySelectorAll('.calc-addon-trigger').forEach(function(chk) {
+                  var parent = chk.closest('.addon-option');
+                  if (chk.checked) {
+                      addonCost += parseInt(chk.value, 10) || 0;
+                      selectedAddons.push(chk.getAttribute('data-addon'));
+                      if (parent) {
+                          parent.style.borderColor = '#0f766e';
+                          parent.style.backgroundColor = '#f0fdfa';
+                      }
+                  } else {
+                      if (parent) {
+                          parent.style.borderColor = '#e2e8f0';
+                          parent.style.backgroundColor = '#ffffff';
+                      }
+                  }
+              });
+
+              var totalUsd = baseCost + addonCost;
+              var approxInr = Math.round((totalUsd * 83.2) / 100) * 100;
+
+              var usdEl = document.getElementById('calc-total-usd');
+              var inrEl = document.getElementById('calc-total-inr');
+              var timelineEl = document.getElementById('calc-timeline');
+              var ctaBtn = document.getElementById('calc-inquiry-btn');
+
+              if (usdEl) usdEl.textContent = '$' + totalUsd;
+              if (inrEl) inrEl.textContent = '(~ ₹' + approxInr.toLocaleString('en-IN') + ' INR)';
+              if (timelineEl) timelineEl.textContent = timeline;
+
+              if (ctaBtn) {
+                  var subject = encodeURIComponent('Project Inquiry: ' + basePlan + ' Configuration ($' + totalUsd + ')');
+                  var addonsList = selectedAddons.length > 0 ? selectedAddons.join(', ') : 'None';
+                  var body = encodeURIComponent(
+                      'Hi Hardik,\n\n' +
+                      'I configured a custom project on your website cost estimator:\n\n' +
+                      '• Core Architecture: ' + basePlan + '\n' +
+                      '• Selected Add-ons: ' + addonsList + '\n' +
+                      '• Estimated Investment: $' + totalUsd + ' (~₹' + approxInr.toLocaleString('en-IN') + ' INR)\n' +
+                      '• Estimated Timeline: ' + timeline + '\n\n' +
+                      'Project Overview / Specific Needs:\n' +
+                      '[Please share brief details about your project or goal]\n\n' +
+                      'Looking forward to your reply!\n\n' +
+                      'Best regards,\n[Your Name]'
+                  );
+                  ctaBtn.href = 'mailto:thehardikrathod87@gmail.com?subject=' + subject + '&body=' + body;
+              }
+          }
+
+          function handleInquirySubmit(e) {
+              e.preventDefault();
+              var name = document.getElementById('inq-name').value.trim();
+              var email = document.getElementById('inq-email').value.trim();
+              var plan = document.getElementById('inq-plan').value;
+              var msg = document.getElementById('inq-msg').value.trim();
+
+              var subject = encodeURIComponent('New Project Inquiry from ' + name + ' (' + plan + ')');
+              var body = encodeURIComponent(
+                  'Hi Hardik,\n\n' +
+                  'I am submitting an inquiry via your portfolio website:\n\n' +
+                  '• Client Name: ' + name + '\n' +
+                  '• Email Address: ' + email + '\n' +
+                  '• Selected Plan / Scope: ' + plan + '\n\n' +
+                  '• Project Summary & Requirements:\n' + msg + '\n\n' +
+                  'Best regards,\n' + name
+              );
+
+              window.location.href = 'mailto:thehardikrathod87@gmail.com?subject=' + subject + '&body=' + body;
+          }
+
+          // Initialize Estimator event listeners on DOM load
+          document.addEventListener('DOMContentLoaded', function() {
+              document.querySelectorAll('.calc-trigger, .calc-addon-trigger').forEach(function(el) {
+                  el.addEventListener('change', updateEstimator);
+              });
+              updateEstimator();
+          });
         </script>
     </body>
 </html>

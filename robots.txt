@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /external/
+Disallow: /blogs/
+
+Sitemap: https://www.hardikrathod.me/sitemap.xml
