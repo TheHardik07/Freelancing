@@ -201,10 +201,16 @@
         <!-- Theme color for mobile browser tab -->
         <meta name="theme-color" content="#0f766e">
 
-        <!-- Preconnect to Google Fonts & Preload Critical LCP Asset -->
+        <!-- Preconnect to Google Fonts & Preload Critical LCP Assets -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="preload" as="image" href="images/hardik.webp" type="image/webp" fetchpriority="high">
+        <link rel="preload" as="image" href="images/hardik-sm.webp" type="image/webp" media="(max-width: 575px)" fetchpriority="high">
+        <link rel="preload" as="image" href="images/hardik.webp" type="image/webp" media="(min-width: 576px)" fetchpriority="high">
+        <link rel="preload" as="image" href="images/line-grid.png" type="image/png" fetchpriority="high">
+
+        <!-- Preload Core Stylesheets for Instant Network Discovery -->
+        <link rel="preload" as="style" href="css/vendors.min.css">
+        <link rel="preload" as="style" href="css/style.min.css">
         
         <!-- Google Fonts with font-display: swap (Inter + Caveat) -->
         <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Caveat:wght@600;700&display=swap">
@@ -309,17 +315,17 @@
                             </div>
                         </div>
                         <div class="position-absolute right-100px bottom-minus-100px w-55 md-w-60 xs-w-100 md-right-150px xs-right-0px z-index-9">
-                            <img src="images/circle-bg.webp" width="355" height="355" loading="eager" decoding="async" class="position-absolute top-20 right-minus-50px" alt="Decorative background circle" data-bottom-top="transform: translateY(-150px)" data-top-bottom="transform: translateY(150px)">
-                            <img src="images/sphere.webp" width="180" height="180" loading="eager" decoding="async" class="position-absolute top-50 left-150px z-index-99 animation-float" alt="Floating sphere accent" data-bottom-top="transform: translateY(-50px)" data-top-bottom="transform: translateY(50px)">
+                            <img src="images/circle-bg.webp" width="355" height="355" loading="lazy" decoding="async" class="position-absolute top-20 right-minus-50px" alt="Decorative background circle" data-bottom-top="transform: translateY(-150px)" data-top-bottom="transform: translateY(150px)">
+                            <img src="images/sphere.webp" width="180" height="180" loading="lazy" decoding="async" class="position-absolute top-50 left-150px z-index-99 animation-float" alt="Floating sphere accent" data-bottom-top="transform: translateY(-50px)" data-top-bottom="transform: translateY(50px)">
                             <div class="atropos" data-atropos>
                                 <div class="atropos-scale">
                                     <div class="atropos-rotate">
                                         <div class="atropos-inner text-center">
                                             <div data-atropos-offset="-5" class="position-absolute left-0px right-0px">
-                                                <img src="images/line-grid.png" width="847" height="847" alt="Decorative grid pattern">
+                                                <img src="images/line-grid.png" width="847" height="847" fetchpriority="high" decoding="async" alt="Decorative grid pattern">
                                             </div>
-                                            <!-- Customized Profile Image (Transparent Cutout, WebP & High Priority LCP) -->
-                                            <img data-atropos-offset="5" class="position-relative" src="images/hardik.webp" width="1030" height="1100" fetchpriority="high" decoding="async" alt="Hardik Rathod - Web Developer Profile Image">
+                                            <!-- Customized Profile Image (Transparent Cutout, Responsive WebP & High Priority LCP) -->
+                                            <img data-atropos-offset="5" class="position-relative" src="images/hardik.webp" srcset="images/hardik-sm.webp 500w, images/hardik.webp 800w" sizes="(max-width: 575px) 500px, 800px" width="800" height="854" fetchpriority="high" decoding="async" alt="Hardik Rathod - Web Developer Profile Image">
                                         </div> 
                                     </div>
                                 </div>
@@ -470,8 +476,8 @@
                                                 <div data-atropos-offset="-1" class="position-absolute left-0px right-0px">
                                                     <img src="images/line-grid.png" width="847" height="847" loading="lazy" decoding="async" class="w-70" alt="Grid pattern decorative background">
                                                 </div>
-                                                <!-- Custom Profile in Skills (Transparent Cutout, WebP & Lazy Loaded) -->
-                                                <img data-atropos-offset="5" class="position-relative" src="images/hardik.webp" width="1030" height="1100" loading="lazy" decoding="async" style="max-height: 550px; width: auto;" alt="Hardik Rathod - Web Developer Skills Profile Picture">
+                                                <!-- Custom Profile in Skills (Transparent Cutout, Responsive WebP & Lazy Loaded) -->
+                                                <img data-atropos-offset="5" class="position-relative" src="images/hardik.webp" srcset="images/hardik-sm.webp 500w, images/hardik.webp 800w" sizes="(max-width: 575px) 500px, 800px" width="800" height="854" loading="lazy" decoding="async" style="max-height: 550px; width: auto;" alt="Hardik Rathod - Web Developer Skills Profile Picture">
                                             </div> 
                                         </div>
                                     </div>
@@ -618,7 +624,7 @@
                                             <p class="fs-14 lh-24 text-muted mb-20px flex-grow-1">A transparent guide breaking down monthly costs, performance, and why 81% of buyers verify businesses on Google before hiring.</p>
                                             <div class="pt-15px border-top border-color-light-medium-gray d-flex justify-content-between align-items-center">
                                                 <span class="fs-12 text-muted fw-600"><i class="feather icon-feather-clock me-1"></i> 5 min read</span>
-                                                <a href="https://blog.hardikrathod.me/2026/09/custom-website-vs-wordpress-vs-shopify.html" target="_blank" class="fs-13 fw-700 text-base-color d-inline-flex align-items-center">Read Article <i class="feather icon-feather-arrow-up-right ms-1"></i></a>
+                                                <a href="https://blog.hardikrathod.me/2026/09/custom-website-vs-wordpress-vs-shopify.html" target="_blank" aria-label="Read Article: Custom Website vs. WordPress vs. Shopify" class="fs-13 fw-700 text-base-color d-inline-flex align-items-center">Read Article <i class="feather icon-feather-arrow-up-right ms-1"></i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -638,7 +644,7 @@
                                             <p class="fs-14 lh-24 text-muted mb-20px flex-grow-1">Cut manual busywork with top-rated free AI websites for automated UI generation, research, presentations, and voice synthesis.</p>
                                             <div class="pt-15px border-top border-color-light-medium-gray d-flex justify-content-between align-items-center">
                                                 <span class="fs-12 text-muted fw-600"><i class="feather icon-feather-clock me-1"></i> 6 min read</span>
-                                                <a href="https://blog.hardikrathod.me/2026/09/top-7-free-ai-tools-that-will-double.html" target="_blank" class="fs-13 fw-700 text-base-color d-inline-flex align-items-center">Read Article <i class="feather icon-feather-arrow-up-right ms-1"></i></a>
+                                                <a href="https://blog.hardikrathod.me/2026/09/top-7-free-ai-tools-that-will-double.html" target="_blank" aria-label="Read Article: Top 7 Free AI Tools That Will Double Your Daily Output" class="fs-13 fw-700 text-base-color d-inline-flex align-items-center">Read Article <i class="feather icon-feather-arrow-up-right ms-1"></i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -658,7 +664,7 @@
                                             <p class="fs-14 lh-24 text-muted mb-20px flex-grow-1">A transparent pricing breakdown from $95 landing pages to full-scale SaaS MVPs, comparing agency markups with solo freelance engineers.</p>
                                             <div class="pt-15px border-top border-color-light-medium-gray d-flex justify-content-between align-items-center">
                                                 <span class="fs-12 text-muted fw-600"><i class="feather icon-feather-clock me-1"></i> 5 min read</span>
-                                                <a href="https://blog.hardikrathod.me/2026/09/how-much-does-website-cost-in-2026.html" target="_blank" class="fs-13 fw-700 text-base-color d-inline-flex align-items-center">Read Article <i class="feather icon-feather-arrow-up-right ms-1"></i></a>
+                                                <a href="https://blog.hardikrathod.me/2026/09/how-much-does-website-cost-in-2026.html" target="_blank" aria-label="Read Article: How Much Does a Website Cost in 2026" class="fs-13 fw-700 text-base-color d-inline-flex align-items-center">Read Article <i class="feather icon-feather-arrow-up-right ms-1"></i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -678,7 +684,7 @@
                                             <p class="fs-14 lh-24 text-muted mb-20px flex-grow-1">Practical 4-step roadmap to landing international paying clients with zero prior agency experience and building proof of work.</p>
                                             <div class="pt-15px border-top border-color-light-medium-gray d-flex justify-content-between align-items-center">
                                                 <span class="fs-12 text-muted fw-600"><i class="feather icon-feather-clock me-1"></i> 7 min read</span>
-                                                <a href="https://blog.hardikrathod.me/2026/09/how-to-start-freelancing-in-2026-step.html" target="_blank" class="fs-13 fw-700 text-base-color d-inline-flex align-items-center">Read Article <i class="feather icon-feather-arrow-up-right ms-1"></i></a>
+                                                <a href="https://blog.hardikrathod.me/2026/09/how-to-start-freelancing-in-2026-step.html" target="_blank" aria-label="Read Article: How to Start Freelancing in 2026" class="fs-13 fw-700 text-base-color d-inline-flex align-items-center">Read Article <i class="feather icon-feather-arrow-up-right ms-1"></i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -698,7 +704,7 @@
                                             <p class="fs-14 lh-24 text-muted mb-20px flex-grow-1">Implementing sub-200ms edge streaming responses using Vercel AI SDK and OpenAI to automate customer support workflows.</p>
                                             <div class="pt-15px border-top border-color-light-medium-gray d-flex justify-content-between align-items-center">
                                                 <span class="fs-12 text-muted fw-600"><i class="feather icon-feather-clock me-1"></i> 6 min read</span>
-                                                <a href="https://blog.hardikrathod.me/2026/09/how-to-integrate-custom-ai-chatbots.html" target="_blank" class="fs-13 fw-700 text-base-color d-inline-flex align-items-center">Read Article <i class="feather icon-feather-arrow-up-right ms-1"></i></a>
+                                                <a href="https://blog.hardikrathod.me/2026/09/how-to-integrate-custom-ai-chatbots.html" target="_blank" aria-label="Read Article: How to Integrate Custom AI Chatbots" class="fs-13 fw-700 text-base-color d-inline-flex align-items-center">Read Article <i class="feather icon-feather-arrow-up-right ms-1"></i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -718,7 +724,7 @@
                                             <p class="fs-14 lh-24 text-muted mb-20px flex-grow-1">How decoupling WordPress with Next.js delivers sub-second load times, unbreakable enterprise security, and 100/100 Core Web Vitals.</p>
                                             <div class="pt-15px border-top border-color-light-medium-gray d-flex justify-content-between align-items-center">
                                                 <span class="fs-12 text-muted fw-600"><i class="feather icon-feather-clock me-1"></i> 5 min read</span>
-                                                <a href="https://blog.hardikrathod.me/2026/09/why-your-business-needs-headless.html" target="_blank" class="fs-13 fw-700 text-base-color d-inline-flex align-items-center">Read Article <i class="feather icon-feather-arrow-up-right ms-1"></i></a>
+                                                <a href="https://blog.hardikrathod.me/2026/09/why-your-business-needs-headless.html" target="_blank" aria-label="Read Article: Why Your Business Needs Headless WordPress" class="fs-13 fw-700 text-base-color d-inline-flex align-items-center">Read Article <i class="feather icon-feather-arrow-up-right ms-1"></i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -1135,16 +1141,16 @@
                             <h3 class="fs-22 fw-700 text-dark-gray mb-3">Send a Project Inquiry</h3>
                             <form id="contact-inquiry-form" onsubmit="handleInquirySubmit(event)">
                                 <div class="mb-3">
-                                    <label class="form-label fs-13 fw-600 text-dark-gray mb-1">Your Name</label>
-                                    <input type="text" id="inq-name" class="form-control border-radius-6px p-3 fs-14" placeholder="e.g. Alex Johnson" required>
+                                    <label for="inq-name" class="form-label fs-13 fw-600 text-dark-gray mb-1">Your Name</label>
+                                    <input type="text" id="inq-name" name="name" class="form-control border-radius-6px p-3 fs-14" placeholder="e.g. Alex Johnson" required>
                                 </div>
                                 <div class="mb-3">
-                                    <label class="form-label fs-13 fw-600 text-dark-gray mb-1">Your Email</label>
-                                    <input type="email" id="inq-email" class="form-control border-radius-6px p-3 fs-14" placeholder="alex@company.com" required>
+                                    <label for="inq-email" class="form-label fs-13 fw-600 text-dark-gray mb-1">Your Email</label>
+                                    <input type="email" id="inq-email" name="email" class="form-control border-radius-6px p-3 fs-14" placeholder="alex@company.com" required>
                                 </div>
                                 <div class="mb-3">
-                                    <label class="form-label fs-13 fw-600 text-dark-gray mb-1">Interested Plan / Scope</label>
-                                    <select id="inq-plan" class="form-select border-radius-6px p-3 fs-14">
+                                    <label for="inq-plan" class="form-label fs-13 fw-600 text-dark-gray mb-1">Interested Plan / Scope</label>
+                                    <select id="inq-plan" name="plan" aria-label="Interested Plan / Scope" class="form-select border-radius-6px p-3 fs-14">
                                         <option value="Basic Plan ($95)">Basic Plan ($95) — Landing Page / Starter Site</option>
                                         <option value="Medium Plan ($155)" selected>Medium Plan ($155) — Dynamic Web App / CMS</option>
                                         <option value="Ultra Plan ($240)">Ultra Plan ($240) — SaaS MVP / Full-Stack</option>
@@ -1152,8 +1158,8 @@
                                     </select>
                                 </div>
                                 <div class="mb-4">
-                                    <label class="form-label fs-13 fw-600 text-dark-gray mb-1">Project Summary / Requirements</label>
-                                    <textarea id="inq-msg" rows="3" class="form-control border-radius-6px p-3 fs-14" placeholder="Tell me briefly about what you want to build..." required></textarea>
+                                    <label for="inq-msg" class="form-label fs-13 fw-600 text-dark-gray mb-1">Project Summary / Requirements</label>
+                                    <textarea id="inq-msg" name="message" rows="3" class="form-control border-radius-6px p-3 fs-14" placeholder="Tell me briefly about what you want to build..." required></textarea>
                                 </div>
                                 <button type="submit" class="btn btn-medium btn-base-color btn-rounded fw-600 w-100 text-white py-3 fs-15" style="background-color: #0f766e; border-color: #0f766e;">
                                     Send Project Inquiry <i class="feather icon-feather-send ms-2"></i>
@@ -1188,14 +1194,21 @@
         <script defer src="js/jquery.js"></script>
         <script defer src="js/vendors.min.js"></script> 
         <script defer src="js/main.js"></script>
-        <!-- Google tag (gtag.js) via official high-performance CDN -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-DND93RJKBT"></script>
+        <!-- Google tag (gtag.js) deferred to eliminate main thread forced reflows -->
         <script>
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-
           gtag('config', 'G-DND93RJKBT');
+
+          window.addEventListener('load', function() {
+            setTimeout(function() {
+              var s = document.createElement('script');
+              s.async = true;
+              s.src = 'https://www.googletagmanager.com/gtag/js?id=G-DND93RJKBT';
+              document.head.appendChild(s);
+            }, 1000);
+          });
         </script>
 
         <!-- Floating Quick-Hire CTA (CRO) -->
