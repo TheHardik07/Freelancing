@@ -1,8 +1,7 @@
 /* ===================================
     Crafto - Freelancer
 ====================================== */
-/* font */
-@import url("../../external/fonts.googleapis.com/css2_family_Inter_wght_100_200_300_.css");
+/* font loaded via optimized preconnect in index.html */
 /* variable */
 :root {
   --base-color: #059669;

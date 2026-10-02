@@ -198,17 +198,29 @@
         <link rel="apple-touch-icon" href="images/apple-touch-icon-57x57.png">
         <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
         <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
-        <!-- google fonts preconnect -->
-        <link rel="preconnect" href="external/fonts.googleapis.com/index.html" crossorigin>
-        <link rel="preconnect" href="external/fonts.gstatic.com/index.html" crossorigin>
-        <!-- style sheets and font icons  -->
+        <!-- Theme color for mobile browser tab -->
+        <meta name="theme-color" content="#0f766e">
+
+        <!-- Preconnect to Google Fonts & Preload Critical LCP Asset -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preload" as="image" href="images/hardik.webp" type="image/webp" fetchpriority="high">
+        
+        <!-- Google Fonts with font-display: swap (Inter + Caveat) -->
+        <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Caveat:wght@600;700&display=swap">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+        <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet"></noscript>
+
+        <!-- Core Stylesheets -->
         <link rel="stylesheet" href="css/vendors.min.css"/>
-        <link rel="stylesheet" href="css/icon.min.css"/>
         <link rel="stylesheet" href="css/style.min.css"/>
         <link rel="stylesheet" href="css/responsive.min.css"/>
-        <link rel="stylesheet" href="theme/freelancer/freelancer.css" />  
-        <!-- Google cursive fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="theme/freelancer/freelancer.css"/>  
+
+        <!-- Non-critical Icons Deferred for Zero Render-Blocking -->
+        <link rel="preload" as="style" href="css/icon.min.css">
+        <link rel="stylesheet" href="css/icon.min.css" media="print" onload="this.media='all'">
+        <noscript><link rel="stylesheet" href="css/icon.min.css"></noscript>
     </head>
     <body data-mobile-nav-style="classic" class="custom-cursor landing-page">
         <!-- start cursor -->
@@ -231,7 +243,7 @@
                         <div class="header-icon">
                             <a href="https://blog.hardikrathod.me" target="_blank" class="text-white me-25px d-none d-sm-inline-block fw-600 fs-15">Blog <i class="feather icon-feather-arrow-up-right fs-14"></i></a>
                             <a href="mailto:thehardikrathod87@gmail.com" class="text-white">thehardikrathod87@gmail.com</a>
-                            <div class="header-push-button hamburger-push-button icon sm-pe-15px">
+                            <div class="header-push-button hamburger-push-button icon sm-pe-15px" role="button" tabindex="0" aria-label="Toggle navigation menu">
                                 <div class="push-button"> 
                                     <span></span>
                                     <span></span> 
@@ -244,7 +256,7 @@
             <!-- end navigation -->
             <!-- start hamburger menu -->
             <div class="push-menu hamburger-nav header-dark hamburger-menu-half bg-dark-gray md-w-60 sm-w-100">
-                <span class="close-menu text-dark-gray bg-white"><i class="fa-solid fa-xmark"></i></span>
+                <span class="close-menu text-dark-gray bg-white" role="button" tabindex="0" aria-label="Close navigation menu"><i class="fa-solid fa-xmark"></i></span>
                 <div class="d-flex flex-column justify-content-center h-100 ps-18 pb-12 xxl-p-12 sm-p-20px">
                     <div class="hamburger-menu menu-list-wrapper w-80 lg-w-100 lg-no-margin sm-mt-auto sm-mb-auto" data-scroll-options='{ "theme": "light" }'> 
                         <ul class="menu-item-list fw-500 p-0">
@@ -297,17 +309,17 @@
                             </div>
                         </div>
                         <div class="position-absolute right-100px bottom-minus-100px w-55 md-w-60 xs-w-100 md-right-150px xs-right-0px z-index-9">
-                            <img src="images/circle-bg.png" class="position-absolute top-20 right-minus-50px" alt="" data-bottom-top="transform: translateY(-150px)" data-top-bottom="transform: translateY(150px)">
-                            <img src="images/sphere.png" class="position-absolute top-50 left-150px z-index-99 animation-float" alt="" data-bottom-top="transform: translateY(-50px)" data-top-bottom="transform: translateY(50px)">
+                            <img src="images/circle-bg.webp" width="355" height="355" loading="eager" decoding="async" class="position-absolute top-20 right-minus-50px" alt="Decorative background circle" data-bottom-top="transform: translateY(-150px)" data-top-bottom="transform: translateY(150px)">
+                            <img src="images/sphere.webp" width="180" height="180" loading="eager" decoding="async" class="position-absolute top-50 left-150px z-index-99 animation-float" alt="Floating sphere accent" data-bottom-top="transform: translateY(-50px)" data-top-bottom="transform: translateY(50px)">
                             <div class="atropos" data-atropos>
                                 <div class="atropos-scale">
                                     <div class="atropos-rotate">
                                         <div class="atropos-inner text-center">
                                             <div data-atropos-offset="-5" class="position-absolute left-0px right-0px">
-                                                <img src="images/line-grid.png" alt="">
+                                                <img src="images/line-grid.png" width="847" height="847" alt="Decorative grid pattern">
                                             </div>
-                                            <!-- Customized Profile Image (Transparent Cutout) -->
-                                            <img data-atropos-offset="5" class="position-relative" src="images/hardik.png" alt="Hardik Rathod - Web Developer Profile Image">
+                                            <!-- Customized Profile Image (Transparent Cutout, WebP & High Priority LCP) -->
+                                            <img data-atropos-offset="5" class="position-relative" src="images/hardik.webp" width="1030" height="1100" fetchpriority="high" decoding="async" alt="Hardik Rathod - Web Developer Profile Image">
                                         </div> 
                                     </div>
                                 </div>
@@ -456,10 +468,10 @@
                                         <div class="atropos-rotate">
                                             <div class="atropos-inner text-center overflow-visible">
                                                 <div data-atropos-offset="-1" class="position-absolute left-0px right-0px">
-                                                    <img src="images/line-grid.png" class="w-70" alt="">
+                                                    <img src="images/line-grid.png" width="847" height="847" loading="lazy" decoding="async" class="w-70" alt="Grid pattern decorative background">
                                                 </div>
-                                                <!-- Custom Profile in Skills (Transparent Cutout) -->
-                                                <img data-atropos-offset="5" class="position-relative" src="images/hardik.png" style="max-height: 550px;" alt="Hardik Rathod - Web Developer Skills Profile Picture">
+                                                <!-- Custom Profile in Skills (Transparent Cutout, WebP & Lazy Loaded) -->
+                                                <img data-atropos-offset="5" class="position-relative" src="images/hardik.webp" width="1030" height="1100" loading="lazy" decoding="async" style="max-height: 550px; width: auto;" alt="Hardik Rathod - Web Developer Skills Profile Picture">
                                             </div> 
                                         </div>
                                     </div>
@@ -596,7 +608,7 @@
                                 <div class="col">
                                     <div class="card h-100 border border-color-light-medium-gray border-radius-12px overflow-hidden bg-white shadow-sm transition-all d-flex flex-column">
                                         <a href="https://blog.hardikrathod.me/2026/09/custom-website-vs-wordpress-vs-shopify.html" target="_blank" class="overflow-hidden d-block position-relative">
-                                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="Small Business Website Growth" class="w-100 transition-all" style="height: 200px; object-fit: cover;">
+                                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=75" width="400" height="200" loading="lazy" decoding="async" alt="Small Business Website Growth" class="w-100 transition-all" style="height: 200px; object-fit: cover;">
                                             <span style="background: rgba(15, 118, 110, 0.9); color: #ffffff;" class="position-absolute top-15px left-15px fs-11 fw-700 text-uppercase px-2 py-1 border-radius-4px">Small Business & Growth</span>
                                         </a>
                                         <div class="p-30px sm-p-20px d-flex flex-column flex-grow-1">
@@ -616,7 +628,7 @@
                                 <div class="col">
                                     <div class="card h-100 border border-color-light-medium-gray border-radius-12px overflow-hidden bg-white shadow-sm transition-all d-flex flex-column">
                                         <a href="https://blog.hardikrathod.me/2026/09/top-7-free-ai-tools-that-will-double.html" target="_blank" class="overflow-hidden d-block position-relative">
-                                            <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80" alt="Artificial Intelligence Tools" class="w-100 transition-all" style="height: 200px; object-fit: cover;">
+                                            <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&q=75" width="400" height="200" loading="lazy" decoding="async" alt="Artificial Intelligence Tools" class="w-100 transition-all" style="height: 200px; object-fit: cover;">
                                             <span style="background: rgba(15, 118, 110, 0.9); color: #ffffff;" class="position-absolute top-15px left-15px fs-11 fw-700 text-uppercase px-2 py-1 border-radius-4px">AI & Productivity</span>
                                         </a>
                                         <div class="p-30px sm-p-20px d-flex flex-column flex-grow-1">
@@ -636,7 +648,7 @@
                                 <div class="col">
                                     <div class="card h-100 border border-color-light-medium-gray border-radius-12px overflow-hidden bg-white shadow-sm transition-all d-flex flex-column">
                                         <a href="https://blog.hardikrathod.me/2026/09/how-much-does-website-cost-in-2026.html" target="_blank" class="overflow-hidden d-block position-relative">
-                                            <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&q=80" alt="Website Cost Estimation" class="w-100 transition-all" style="height: 200px; object-fit: cover;">
+                                            <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=600&q=75" width="400" height="200" loading="lazy" decoding="async" alt="Website Cost Estimation" class="w-100 transition-all" style="height: 200px; object-fit: cover;">
                                             <span style="background: rgba(15, 118, 110, 0.9); color: #ffffff;" class="position-absolute top-15px left-15px fs-11 fw-700 text-uppercase px-2 py-1 border-radius-4px">Web Pricing & ROI</span>
                                         </a>
                                         <div class="p-30px sm-p-20px d-flex flex-column flex-grow-1">
@@ -656,7 +668,7 @@
                                 <div class="col">
                                     <div class="card h-100 border border-color-light-medium-gray border-radius-12px overflow-hidden bg-white shadow-sm transition-all d-flex flex-column">
                                         <a href="https://blog.hardikrathod.me/2026/09/how-to-start-freelancing-in-2026-step.html" target="_blank" class="overflow-hidden d-block position-relative">
-                                            <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&w=800&q=80" alt="Freelance Developer Laptop" class="w-100 transition-all" style="height: 200px; object-fit: cover;">
+                                            <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&w=600&q=75" width="400" height="200" loading="lazy" decoding="async" alt="Freelance Developer Laptop" class="w-100 transition-all" style="height: 200px; object-fit: cover;">
                                             <span style="background: rgba(15, 118, 110, 0.9); color: #ffffff;" class="position-absolute top-15px left-15px fs-11 fw-700 text-uppercase px-2 py-1 border-radius-4px">Freelancing Career</span>
                                         </a>
                                         <div class="p-30px sm-p-20px d-flex flex-column flex-grow-1">
@@ -676,7 +688,7 @@
                                 <div class="col">
                                     <div class="card h-100 border border-color-light-medium-gray border-radius-12px overflow-hidden bg-white shadow-sm transition-all d-flex flex-column">
                                         <a href="https://blog.hardikrathod.me/2026/09/how-to-integrate-custom-ai-chatbots.html" target="_blank" class="overflow-hidden d-block position-relative">
-                                            <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80" alt="Custom AI Chatbot Integration" class="w-100 transition-all" style="height: 200px; object-fit: cover;">
+                                            <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=600&q=75" width="400" height="200" loading="lazy" decoding="async" alt="Custom AI Chatbot Integration" class="w-100 transition-all" style="height: 200px; object-fit: cover;">
                                             <span style="background: rgba(15, 118, 110, 0.9); color: #ffffff;" class="position-absolute top-15px left-15px fs-11 fw-700 text-uppercase px-2 py-1 border-radius-4px">Next.js & AI</span>
                                         </a>
                                         <div class="p-30px sm-p-20px d-flex flex-column flex-grow-1">
@@ -696,7 +708,7 @@
                                 <div class="col">
                                     <div class="card h-100 border border-color-light-medium-gray border-radius-12px overflow-hidden bg-white shadow-sm transition-all d-flex flex-column">
                                         <a href="https://blog.hardikrathod.me/2026/09/why-your-business-needs-headless.html" target="_blank" class="overflow-hidden d-block position-relative">
-                                            <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=800&q=80" alt="Headless CMS Architecture" class="w-100 transition-all" style="height: 200px; object-fit: cover;">
+                                            <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=600&q=75" width="400" height="200" loading="lazy" decoding="async" alt="Headless CMS Architecture" class="w-100 transition-all" style="height: 200px; object-fit: cover;">
                                             <span style="background: rgba(15, 118, 110, 0.9); color: #ffffff;" class="position-absolute top-15px left-15px fs-11 fw-700 text-uppercase px-2 py-1 border-radius-4px">Headless CMS</span>
                                         </a>
                                         <div class="p-30px sm-p-20px d-flex flex-column flex-grow-1">
@@ -1059,9 +1071,9 @@
         </main>
         <!-- start footer section -->
         <footer id="contact" class="position-relative overflow-hidden pb-0">
-            <img src="images/circle-bg.png" class="position-absolute top-0px right-minus-100px" alt=""> 
+            <img src="images/circle-bg.webp" width="355" height="355" loading="lazy" decoding="async" class="position-absolute top-0px right-minus-100px" alt="Decorative circular graphic"> 
             <div class="container position-relative">
-                <img src="images/sphere.png" class="position-absolute top-20px right-minus-100px d-none d-md-block" alt="">
+                <img src="images/sphere.webp" width="180" height="180" loading="lazy" decoding="async" class="position-absolute top-20px right-minus-100px d-none d-md-block" alt="Decorative sphere shape">
                 <div class="row align-items-center g-5 pb-5">
                     <!-- Left Column: Trust Badges & Direct Contact -->
                     <div class="col-lg-6 position-relative"> 
@@ -1172,12 +1184,12 @@
           </a>
         </div>
         <!-- end scroll progress -->
-        <!-- javascript libraries -->
-        <script type="text/javascript" src="js/jquery.js"></script>
-        <script type="text/javascript" src="js/vendors.min.js"></script> 
-        <script type="text/javascript" src="js/main.js"></script>
-        <!-- Google tag (gtag.js) -->
-        <script async src="external/www.googletagmanager.com/gtag/js_id_G-DND93RJKBT"></script>
+        <!-- javascript libraries (deferred for zero main-thread blocking) -->
+        <script defer src="js/jquery.js"></script>
+        <script defer src="js/vendors.min.js"></script> 
+        <script defer src="js/main.js"></script>
+        <!-- Google tag (gtag.js) via official high-performance CDN -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-DND93RJKBT"></script>
         <script>
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
