@@ -116,8 +116,9 @@
                 <div class="container position-relative z-index-1">
                     <div class="row align-items-center">
                         <div class="col-lg-9 col-xl-8">
-                            <span class="badge bg-white text-dark-gray px-3 py-2 fs-13 fw-700 text-uppercase border-radius-4px mb-3 d-inline-block">
-                                <i class="feather icon-feather-globe text-base-color me-1"></i> International Remote Engineering
+                            <span class="badge glass-pill text-white px-3 py-2 fs-13 fw-700 text-uppercase border-radius-4px mb-3 d-inline-flex align-items-center">
+                                <span class="status-pulse-dot me-2"></span>
+                                <i class="feather icon-feather-globe text-white me-1"></i> International Remote Engineering
                             </span>
                             <h1 class="fs-52 sm-fs-34 text-white fw-800 ls-minus-1px mb-20px lh-120">
                                 Silicon Valley &amp; European Standards. Without the $180k Agency Overhead.
@@ -126,7 +127,7 @@
                                 I collaborate directly with CEOs, CTOs, and marketing leaders across the United States, United Kingdom, Canada, Australia, and the UAE to build sub-second web platforms, enterprise SaaS MVPs, and headless commerce engines.
                             </p>
                             <div class="d-flex flex-wrap gap-3 align-items-center">
-                                <a href="#international-inquiry" class="btn btn-medium btn-white btn-rounded fw-700 text-dark-gray px-4">
+                                <a href="#international-inquiry" class="btn btn-medium btn-white btn-rounded btn-sheen fw-700 text-dark-gray px-4">
                                     Discuss Your Global Project &rarr;
                                 </a>
                                 <a href="services.html" class="btn btn-medium btn-transparent-white btn-rounded fw-600 px-4">
@@ -172,7 +173,7 @@
                     <div class="row row-cols-1 row-cols-lg-3 row-cols-md-2 g-4 scroll-3d-container">
                         <!-- US Market -->
                         <div class="col">
-                            <div class="card scroll-3d-item h-100 border border-color-light-medium-gray border-radius-16px p-35px bg-white shadow-sm d-flex flex-column transition-all">
+                            <div class="card scroll-3d-item spotlight-card h-100 border border-color-light-medium-gray border-radius-16px p-35px bg-white shadow-sm d-flex flex-column transition-all">
                                 <div class="d-flex justify-content-between align-items-center mb-20px">
                                     <span class="fs-32">🇺🇸</span>
                                     <span class="badge bg-light text-dark fw-700 fs-12 px-2 py-1">United States</span>
@@ -194,7 +195,7 @@
 
                         <!-- UK Market -->
                         <div class="col">
-                            <div class="card scroll-3d-item h-100 border border-color-light-medium-gray border-radius-16px p-35px bg-white shadow-sm d-flex flex-column transition-all">
+                            <div class="card scroll-3d-item spotlight-card h-100 border border-color-light-medium-gray border-radius-16px p-35px bg-white shadow-sm d-flex flex-column transition-all">
                                 <div class="d-flex justify-content-between align-items-center mb-20px">
                                     <span class="fs-32">🇬🇧</span>
                                     <span class="badge bg-light text-dark fw-700 fs-12 px-2 py-1">United Kingdom</span>
@@ -216,7 +217,7 @@
 
                         <!-- UAE / Gulf Market -->
                         <div class="col">
-                            <div class="card scroll-3d-item h-100 border border-color-light-medium-gray border-radius-16px p-35px bg-white shadow-sm d-flex flex-column transition-all">
+                            <div class="card scroll-3d-item spotlight-card h-100 border border-color-light-medium-gray border-radius-16px p-35px bg-white shadow-sm d-flex flex-column transition-all">
                                 <div class="d-flex justify-content-between align-items-center mb-20px">
                                     <span class="fs-32">🇦🇪</span>
                                     <span class="badge bg-light text-dark fw-700 fs-12 px-2 py-1">UAE &amp; Saudi Arabia</span>
@@ -238,7 +239,7 @@
 
                         <!-- Australia Market -->
                         <div class="col">
-                            <div class="card scroll-3d-item h-100 border border-color-light-medium-gray border-radius-16px p-35px bg-white shadow-sm d-flex flex-column transition-all">
+                            <div class="card scroll-3d-item spotlight-card h-100 border border-color-light-medium-gray border-radius-16px p-35px bg-white shadow-sm d-flex flex-column transition-all">
                                 <div class="d-flex justify-content-between align-items-center mb-20px">
                                     <span class="fs-32">🇦🇺</span>
                                     <span class="badge bg-light text-dark fw-700 fs-12 px-2 py-1">Australia &amp; NZ</span>
@@ -260,7 +261,7 @@
 
                         <!-- Canada Market -->
                         <div class="col">
-                            <div class="card scroll-3d-item h-100 border border-color-light-medium-gray border-radius-16px p-35px bg-white shadow-sm d-flex flex-column transition-all">
+                            <div class="card scroll-3d-item spotlight-card h-100 border border-color-light-medium-gray border-radius-16px p-35px bg-white shadow-sm d-flex flex-column transition-all">
                                 <div class="d-flex justify-content-between align-items-center mb-20px">
                                     <span class="fs-32">🇨🇦</span>
                                     <span class="badge bg-light text-dark fw-700 fs-12 px-2 py-1">Canada</span>
@@ -282,7 +283,7 @@
 
                         <!-- Europe (DACH) -->
                         <div class="col">
-                            <div class="card scroll-3d-item h-100 border border-color-light-medium-gray border-radius-16px p-35px bg-white shadow-sm d-flex flex-column transition-all">
+                            <div class="card scroll-3d-item spotlight-card h-100 border border-color-light-medium-gray border-radius-16px p-35px bg-white shadow-sm d-flex flex-column transition-all">
                                 <div class="d-flex justify-content-between align-items-center mb-20px">
                                     <span class="fs-32">🇩🇪 🇨🇭</span>
                                     <span class="badge bg-light text-dark fw-700 fs-12 px-2 py-1">Germany, Switzerland &amp; EU</span>
@@ -527,6 +528,30 @@
               } else {
                   items.forEach(function(item) { item.classList.add('in-view-3d'); });
               }
+          })();
+
+          // Dynamic Cursor-Tracking Spotlight Engine
+          (function() {
+              var cards = document.querySelectorAll('.spotlight-card');
+              if (!cards.length) return;
+              var isTicking = false;
+              window.addEventListener('mousemove', function(e) {
+                  if (!isTicking) {
+                      window.requestAnimationFrame(function() {
+                          cards.forEach(function(card) {
+                              var rect = card.getBoundingClientRect();
+                              var x = e.clientX - rect.left;
+                              var y = e.clientY - rect.top;
+                              if (x >= -80 && x <= rect.width + 80 && y >= -80 && y <= rect.height + 80) {
+                                  card.style.setProperty('--mouse-x', x + 'px');
+                                  card.style.setProperty('--mouse-y', y + 'px');
+                              }
+                          });
+                          isTicking = false;
+                      });
+                      isTicking = true;
+                  }
+              }, { passive: true });
           })();
         </script>
     </body>

@@ -194,7 +194,7 @@
                     <div class="row row-cols-1 row-cols-lg-3 row-cols-md-2 g-4 scroll-3d-container">
                         <!-- Service 1 -->
                         <div class="col">
-                            <div class="card scroll-3d-item h-100 border border-color-light-medium-gray border-radius-16px p-35px bg-white shadow-sm d-flex flex-column transition-all">
+                            <div class="card scroll-3d-item spotlight-card h-100 border border-color-light-medium-gray border-radius-16px p-35px bg-white shadow-sm d-flex flex-column transition-all">
                                 <div class="mb-20px d-inline-flex p-3 border-radius-12px" style="background: #f0fdfa; color: #0f766e; width: fit-content;">
                                     <i class="feather icon-feather-layers fs-28"></i>
                                 </div>
@@ -213,7 +213,7 @@
 
                         <!-- Service 2 -->
                         <div class="col">
-                            <div class="card scroll-3d-item h-100 border border-color-light-medium-gray border-radius-16px p-35px bg-white shadow-sm d-flex flex-column transition-all">
+                            <div class="card scroll-3d-item spotlight-card h-100 border border-color-light-medium-gray border-radius-16px p-35px bg-white shadow-sm d-flex flex-column transition-all">
                                 <div class="mb-20px d-inline-flex p-3 border-radius-12px" style="background: #f0fdfa; color: #0f766e; width: fit-content;">
                                     <i class="feather icon-feather-cpu fs-28"></i>
                                 </div>
@@ -232,7 +232,7 @@
 
                         <!-- Service 3 -->
                         <div class="col">
-                            <div class="card scroll-3d-item h-100 border border-color-light-medium-gray border-radius-16px p-35px bg-white shadow-sm d-flex flex-column transition-all">
+                            <div class="card scroll-3d-item spotlight-card h-100 border border-color-light-medium-gray border-radius-16px p-35px bg-white shadow-sm d-flex flex-column transition-all">
                                 <div class="mb-20px d-inline-flex p-3 border-radius-12px" style="background: #f0fdfa; color: #0f766e; width: fit-content;">
                                     <i class="feather icon-feather-message-square fs-28"></i>
                                 </div>
@@ -251,7 +251,7 @@
 
                         <!-- Service 4 -->
                         <div class="col">
-                            <div class="card scroll-3d-item h-100 border border-color-light-medium-gray border-radius-16px p-35px bg-white shadow-sm d-flex flex-column transition-all">
+                            <div class="card scroll-3d-item spotlight-card h-100 border border-color-light-medium-gray border-radius-16px p-35px bg-white shadow-sm d-flex flex-column transition-all">
                                 <div class="mb-20px d-inline-flex p-3 border-radius-12px" style="background: #f0fdfa; color: #0f766e; width: fit-content;">
                                     <i class="feather icon-feather-shopping-bag fs-28"></i>
                                 </div>
@@ -270,7 +270,7 @@
 
                         <!-- Service 5 -->
                         <div class="col">
-                            <div class="card scroll-3d-item h-100 border border-color-light-medium-gray border-radius-16px p-35px bg-white shadow-sm d-flex flex-column transition-all">
+                            <div class="card scroll-3d-item spotlight-card h-100 border border-color-light-medium-gray border-radius-16px p-35px bg-white shadow-sm d-flex flex-column transition-all">
                                 <div class="mb-20px d-inline-flex p-3 border-radius-12px" style="background: #f0fdfa; color: #0f766e; width: fit-content;">
                                     <i class="feather icon-feather-zap fs-28"></i>
                                 </div>
@@ -289,7 +289,7 @@
 
                         <!-- Service 6 -->
                         <div class="col">
-                            <div class="card scroll-3d-item h-100 border border-color-light-medium-gray border-radius-16px p-35px bg-white shadow-sm d-flex flex-column transition-all">
+                            <div class="card scroll-3d-item spotlight-card h-100 border border-color-light-medium-gray border-radius-16px p-35px bg-white shadow-sm d-flex flex-column transition-all">
                                 <div class="mb-20px d-inline-flex p-3 border-radius-12px" style="background: #f0fdfa; color: #0f766e; width: fit-content;">
                                     <i class="feather icon-feather-shield fs-28"></i>
                                 </div>
@@ -531,6 +531,30 @@
               } else {
                   items.forEach(function(item) { item.classList.add('in-view-3d'); });
               }
+          })();
+
+          // Dynamic Cursor-Tracking Spotlight Engine
+          (function() {
+              var cards = document.querySelectorAll('.spotlight-card');
+              if (!cards.length) return;
+              var isTicking = false;
+              window.addEventListener('mousemove', function(e) {
+                  if (!isTicking) {
+                      window.requestAnimationFrame(function() {
+                          cards.forEach(function(card) {
+                              var rect = card.getBoundingClientRect();
+                              var x = e.clientX - rect.left;
+                              var y = e.clientY - rect.top;
+                              if (x >= -80 && x <= rect.width + 80 && y >= -80 && y <= rect.height + 80) {
+                                  card.style.setProperty('--mouse-x', x + 'px');
+                                  card.style.setProperty('--mouse-y', y + 'px');
+                              }
+                          });
+                          isTicking = false;
+                      });
+                      isTicking = true;
+                  }
+              }, { passive: true });
           })();
         </script>
     </body>
