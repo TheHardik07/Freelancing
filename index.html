@@ -317,13 +317,58 @@
                         <div class="position-absolute right-100px bottom-minus-100px w-55 md-w-60 xs-w-100 md-right-150px xs-right-0px z-index-9">
                             <img src="images/circle-bg.webp" width="355" height="355" loading="lazy" decoding="async" class="position-absolute top-20 right-minus-50px" alt="Decorative background circle" data-bottom-top="transform: translateY(-150px)" data-top-bottom="transform: translateY(150px)">
                             <img src="images/sphere.webp" width="180" height="180" loading="lazy" decoding="async" class="position-absolute top-50 left-150px z-index-99 animation-float" alt="Floating sphere accent" data-bottom-top="transform: translateY(-50px)" data-top-bottom="transform: translateY(50px)">
+                            
+                            <!-- 3D Rotating Geometric Wireframe Prism (Pure GPU CSS, Zero Lag) -->
+                            <div class="cube-3d-wrap d-none d-md-block" aria-hidden="true">
+                                <div class="cube-3d">
+                                    <div class="cube-face cube-front"></div>
+                                    <div class="cube-face cube-back"></div>
+                                    <div class="cube-face cube-right"></div>
+                                    <div class="cube-face cube-left"></div>
+                                    <div class="cube-face cube-top"></div>
+                                    <div class="cube-face cube-bottom"></div>
+                                </div>
+                            </div>
+
                             <div class="atropos" data-atropos>
                                 <div class="atropos-scale">
                                     <div class="atropos-rotate">
-                                        <div class="atropos-inner text-center">
+                                        <div class="atropos-inner text-center position-relative">
                                             <div data-atropos-offset="-5" class="position-absolute left-0px right-0px">
                                                 <img src="images/line-grid.png" width="847" height="847" fetchpriority="high" decoding="async" alt="Decorative grid pattern">
                                             </div>
+
+                                            <!-- 3D Floating Tech Badges (Multi-Layer Depth & Parallax) -->
+                                            <div data-atropos-offset="10" class="hero-3d-badge hero-3d-badge-1" aria-hidden="true">
+                                                <div class="d-flex align-items-center">
+                                                    <span class="badge-status-dot me-2"></span>
+                                                    <div class="text-start">
+                                                        <strong class="d-block fs-13 text-dark-gray fw-700 lh-16">Next.js & React</strong>
+                                                        <span class="fs-11 text-muted lh-14">Full-Stack Stack</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div data-atropos-offset="14" class="hero-3d-badge hero-3d-badge-2" aria-hidden="true">
+                                                <div class="d-flex align-items-center">
+                                                    <span class="fs-18 me-2">🚀</span>
+                                                    <div class="text-start">
+                                                        <strong class="d-block fs-13 text-dark-gray fw-700 lh-16">100/100 Core Vitals</strong>
+                                                        <span class="fs-11 text-muted lh-14">Sub-Second Load</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div data-atropos-offset="8" class="hero-3d-badge hero-3d-badge-3 d-none d-lg-block" aria-hidden="true">
+                                                <div class="d-flex align-items-center">
+                                                    <span class="fs-18 me-2">🤖</span>
+                                                    <div class="text-start">
+                                                        <strong class="d-block fs-13 text-dark-gray fw-700 lh-16">Custom AI Agents</strong>
+                                                        <span class="fs-11 text-muted lh-14">Streaming LLMs</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
                                             <!-- Customized Profile Image (Transparent Cutout, Responsive WebP & High Priority LCP) -->
                                             <img data-atropos-offset="5" class="position-relative" src="images/hardik.webp" srcset="images/hardik-sm.webp 500w, images/hardik.webp 800w" sizes="(max-width: 575px) 500px, 800px" width="800" height="854" fetchpriority="high" decoding="async" alt="Hardik Rathod - Web Developer Profile Image">
                                         </div> 
@@ -612,7 +657,7 @@
                             <div class="row row-cols-1 row-cols-lg-3 row-cols-md-2 g-4 mt-2">
                                 <!-- Blog Card 1 -->
                                 <div class="col">
-                                    <div class="card h-100 border border-color-light-medium-gray border-radius-12px overflow-hidden bg-white shadow-sm transition-all d-flex flex-column">
+                                    <div class="card card-3d-tilt h-100 border border-color-light-medium-gray border-radius-12px overflow-hidden bg-white shadow-sm transition-all d-flex flex-column">
                                         <a href="https://blog.hardikrathod.me/2026/09/custom-website-vs-wordpress-vs-shopify.html" target="_blank" class="overflow-hidden d-block position-relative">
                                             <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=75" width="400" height="200" loading="lazy" decoding="async" alt="Small Business Website Growth" class="w-100 transition-all" style="height: 200px; object-fit: cover;">
                                             <span style="background: rgba(15, 118, 110, 0.9); color: #ffffff;" class="position-absolute top-15px left-15px fs-11 fw-700 text-uppercase px-2 py-1 border-radius-4px">Small Business & Growth</span>
@@ -632,7 +677,7 @@
 
                                 <!-- Blog Card 2 -->
                                 <div class="col">
-                                    <div class="card h-100 border border-color-light-medium-gray border-radius-12px overflow-hidden bg-white shadow-sm transition-all d-flex flex-column">
+                                    <div class="card card-3d-tilt h-100 border border-color-light-medium-gray border-radius-12px overflow-hidden bg-white shadow-sm transition-all d-flex flex-column">
                                         <a href="https://blog.hardikrathod.me/2026/09/top-7-free-ai-tools-that-will-double.html" target="_blank" class="overflow-hidden d-block position-relative">
                                             <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&q=75" width="400" height="200" loading="lazy" decoding="async" alt="Artificial Intelligence Tools" class="w-100 transition-all" style="height: 200px; object-fit: cover;">
                                             <span style="background: rgba(15, 118, 110, 0.9); color: #ffffff;" class="position-absolute top-15px left-15px fs-11 fw-700 text-uppercase px-2 py-1 border-radius-4px">AI & Productivity</span>
@@ -652,7 +697,7 @@
 
                                 <!-- Blog Card 3 -->
                                 <div class="col">
-                                    <div class="card h-100 border border-color-light-medium-gray border-radius-12px overflow-hidden bg-white shadow-sm transition-all d-flex flex-column">
+                                    <div class="card card-3d-tilt h-100 border border-color-light-medium-gray border-radius-12px overflow-hidden bg-white shadow-sm transition-all d-flex flex-column">
                                         <a href="https://blog.hardikrathod.me/2026/09/how-much-does-website-cost-in-2026.html" target="_blank" class="overflow-hidden d-block position-relative">
                                             <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=600&q=75" width="400" height="200" loading="lazy" decoding="async" alt="Website Cost Estimation" class="w-100 transition-all" style="height: 200px; object-fit: cover;">
                                             <span style="background: rgba(15, 118, 110, 0.9); color: #ffffff;" class="position-absolute top-15px left-15px fs-11 fw-700 text-uppercase px-2 py-1 border-radius-4px">Web Pricing & ROI</span>
@@ -672,7 +717,7 @@
 
                                 <!-- Blog Card 4 -->
                                 <div class="col">
-                                    <div class="card h-100 border border-color-light-medium-gray border-radius-12px overflow-hidden bg-white shadow-sm transition-all d-flex flex-column">
+                                    <div class="card card-3d-tilt h-100 border border-color-light-medium-gray border-radius-12px overflow-hidden bg-white shadow-sm transition-all d-flex flex-column">
                                         <a href="https://blog.hardikrathod.me/2026/09/how-to-start-freelancing-in-2026-step.html" target="_blank" class="overflow-hidden d-block position-relative">
                                             <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&w=600&q=75" width="400" height="200" loading="lazy" decoding="async" alt="Freelance Developer Laptop" class="w-100 transition-all" style="height: 200px; object-fit: cover;">
                                             <span style="background: rgba(15, 118, 110, 0.9); color: #ffffff;" class="position-absolute top-15px left-15px fs-11 fw-700 text-uppercase px-2 py-1 border-radius-4px">Freelancing Career</span>
@@ -692,7 +737,7 @@
 
                                 <!-- Blog Card 5 -->
                                 <div class="col">
-                                    <div class="card h-100 border border-color-light-medium-gray border-radius-12px overflow-hidden bg-white shadow-sm transition-all d-flex flex-column">
+                                    <div class="card card-3d-tilt h-100 border border-color-light-medium-gray border-radius-12px overflow-hidden bg-white shadow-sm transition-all d-flex flex-column">
                                         <a href="https://blog.hardikrathod.me/2026/09/how-to-integrate-custom-ai-chatbots.html" target="_blank" class="overflow-hidden d-block position-relative">
                                             <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=600&q=75" width="400" height="200" loading="lazy" decoding="async" alt="Custom AI Chatbot Integration" class="w-100 transition-all" style="height: 200px; object-fit: cover;">
                                             <span style="background: rgba(15, 118, 110, 0.9); color: #ffffff;" class="position-absolute top-15px left-15px fs-11 fw-700 text-uppercase px-2 py-1 border-radius-4px">Next.js & AI</span>
@@ -712,7 +757,7 @@
 
                                 <!-- Blog Card 6 -->
                                 <div class="col">
-                                    <div class="card h-100 border border-color-light-medium-gray border-radius-12px overflow-hidden bg-white shadow-sm transition-all d-flex flex-column">
+                                    <div class="card card-3d-tilt h-100 border border-color-light-medium-gray border-radius-12px overflow-hidden bg-white shadow-sm transition-all d-flex flex-column">
                                         <a href="https://blog.hardikrathod.me/2026/09/why-your-business-needs-headless.html" target="_blank" class="overflow-hidden d-block position-relative">
                                             <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=600&q=75" width="400" height="200" loading="lazy" decoding="async" alt="Headless CMS Architecture" class="w-100 transition-all" style="height: 200px; object-fit: cover;">
                                             <span style="background: rgba(15, 118, 110, 0.9); color: #ffffff;" class="position-absolute top-15px left-15px fs-11 fw-700 text-uppercase px-2 py-1 border-radius-4px">Headless CMS</span>
@@ -765,7 +810,7 @@
                             <div class="row row-cols-1 row-cols-lg-3 row-cols-md-2 g-4 justify-content-center">
                                 <!-- Basic Plan -->
                                 <div class="col">
-                                    <div class="card h-100 border border-color-light-medium-gray border-radius-12px p-35px sm-p-25px bg-white transition-all shadow-sm d-flex flex-column">
+                                    <div class="card card-3d-tilt h-100 border border-color-light-medium-gray border-radius-12px p-35px sm-p-25px bg-white transition-all shadow-sm d-flex flex-column">
                                         <div class="mb-20px d-flex justify-content-between align-items-center">
                                             <span class="fs-12 fw-700 text-uppercase px-2 py-1 border-radius-4px" style="background: #f1f5f9; color: #475569;">Starter</span>
                                         </div>
@@ -785,14 +830,14 @@
                                             <li class="mb-10px d-flex align-items-start"><i class="feather icon-feather-check-circle text-base-color me-2 fs-16 mt-1"></i> <span>Deployment on Vercel / Netlify</span></li>
                                             <li class="d-flex align-items-start"><i class="feather icon-feather-clock text-base-color me-2 fs-16 mt-1"></i> <span>Delivery in <strong>3–5 Business Days</strong></span></li>
                                         </ul>
-                                        <a href="mailto:thehardikrathod87@gmail.com?subject=Inquiry:%20Basic%20Plan%20($95)%20-%20Web%20Development&body=Hi%20Hardik,%0A%0AI%20would%20like%20to%20get%20started%20with%20your%20Basic%20Plan%20($95).%0A%0AProject%20Details:%0A-%20Business%20/%20Project%20Name:%0A-%20Website%20Type:%0A-%20Target%20Timeline:%0A-%20Key%20Requirements:%0A%0ALooking%20forward%20to%20hearing%20from%20you!" class="btn btn-medium btn-transparent-dark-gray btn-rounded fw-600 w-100 text-center">
+                                        <a href="mailto:thehardikrathod87@gmail.com?subject=Inquiry:%20Basic%20Plan%20($95)%20-%20Web%20Development&body=Hi%20Hardik,%0A%0AI%20would%20like%20to%20get%20started%20with%20your%20Basic%20Plan%20($95).%0A%0AProject%20Details:%0A-%20Business%20/%20Project%20Name:%0A-%20Website%20Type:%0A-%20Target%20Timeline:%0A-%20Key%20Requirements:%0A%0ALooking%20forward%20to%20hearing%20from%20you!" class="btn btn-medium btn-transparent-dark-gray btn-rounded fw-600 w-100 text-center btn-3d-push">
                                             Get Started with Basic
                                         </a>
                                     </div>
                                 </div>
                                 <!-- Medium Plan (Featured) -->
                                 <div class="col">
-                                    <div class="card h-100 border-2 border-radius-12px p-35px sm-p-25px bg-white transition-all shadow-lg d-flex flex-column position-relative" style="border-color: #0f766e;">
+                                    <div class="card card-3d-tilt h-100 border-2 border-radius-12px p-35px sm-p-25px bg-white transition-all shadow-lg d-flex flex-column position-relative" style="border-color: #0f766e;">
                                         <div class="position-absolute top-0 end-0 mt-3 me-3">
                                             <span class="fs-12 fw-700 text-uppercase px-2 py-1 border-radius-4px text-white" style="background: #0f766e;">Most Popular</span>
                                         </div>
@@ -815,14 +860,14 @@
                                             <li class="mb-10px d-flex align-items-start"><i class="feather icon-feather-check-circle text-base-color me-2 fs-16 mt-1"></i> <span>Advanced On-Page SEO & Social Metadata</span></li>
                                             <li class="d-flex align-items-start"><i class="feather icon-feather-clock text-base-color me-2 fs-16 mt-1"></i> <span>Delivery in <strong>7–10 Business Days</strong></span></li>
                                         </ul>
-                                        <a href="mailto:thehardikrathod87@gmail.com?subject=Inquiry:%20Medium%20Plan%20($155)%20-%20Web%20Development&body=Hi%20Hardik,%0A%0AI%20would%20like%20to%20get%20started%20with%20your%20Medium%20Plan%20($155).%0A%0AProject%20Details:%0A-%20Business%20/%20Project%20Name:%0A-%20Project%20Scope%20(Dynamic%20Web%20App%20/%20Next.js%20/%20WordPress%20/%20CMS):%0A-%20Target%20Timeline:%0A-%20Key%20Features%20Needed:%0A%0ALooking%20forward%20to%20hearing%20from%20you!" class="btn btn-medium btn-base-color btn-rounded fw-600 w-100 text-center text-white" style="background-color: #0f766e; border-color: #0f766e;">
+                                        <a href="mailto:thehardikrathod87@gmail.com?subject=Inquiry:%20Medium%20Plan%20($155)%20-%20Web%20Development&body=Hi%20Hardik,%0A%0AI%20would%20like%20to%20get%20started%20with%20your%20Medium%20Plan%20($155).%0A%0AProject%20Details:%0A-%20Business%20/%20Project%20Name:%0A-%20Project%20Scope%20(Dynamic%20Web%20App%20/%20Next.js%20/%20WordPress%20/%20CMS):%0A-%20Target%20Timeline:%0A-%20Key%20Features%20Needed:%0A%0ALooking%20forward%20to%20hearing%20from%20you!" class="btn btn-medium btn-base-color btn-rounded fw-600 w-100 text-center text-white btn-3d-push" style="background-color: #0f766e; border-color: #0f766e;">
                                             Choose Medium Plan
                                         </a>
                                     </div>
                                 </div>
                                 <!-- Ultra Plan -->
                                 <div class="col">
-                                    <div class="card h-100 border border-color-light-medium-gray border-radius-12px p-35px sm-p-25px bg-white transition-all shadow-sm d-flex flex-column">
+                                    <div class="card card-3d-tilt h-100 border border-color-light-medium-gray border-radius-12px p-35px sm-p-25px bg-white transition-all shadow-sm d-flex flex-column">
                                         <div class="mb-20px d-flex justify-content-between align-items-center">
                                             <span class="fs-12 fw-700 text-uppercase px-2 py-1 border-radius-4px" style="background: #f8fafc; color: #334155;">Startups & Scale</span>
                                         </div>
@@ -842,7 +887,7 @@
                                             <li class="mb-10px d-flex align-items-start"><i class="feather icon-feather-check-circle text-base-color me-2 fs-16 mt-1"></i> <span>AI Chatbot / OpenAI Streaming API Setup</span></li>
                                             <li class="d-flex align-items-start"><i class="feather icon-feather-clock text-base-color me-2 fs-16 mt-1"></i> <span>Delivery in <strong>2–3 Weeks</strong></span></li>
                                         </ul>
-                                        <a href="mailto:thehardikrathod87@gmail.com?subject=Inquiry:%20Ultra%20Plan%20($240)%20-%20SaaS%20MVP%20/%20Full-Stack&body=Hi%20Hardik,%0A%0AI%20would%20like%20to%20get%20started%20with%20your%20Ultra%20Plan%20($240).%0A%0AProject%20Details:%0A-%20Startup%20/%20SaaS%20/%20Product%20Name:%0A-%20Core%20Features%20(Auth,%20Database,%20Payments,%20AI%20Chatbot):%0A-%20Target%20Launch%20Timeline:%0A-%20Overview%20of%20Requirements:%0A%0ALooking%20forward%20to%20hearing%20from%20you!" class="btn btn-medium btn-transparent-dark-gray btn-rounded fw-600 w-100 text-center">
+                                        <a href="mailto:thehardikrathod87@gmail.com?subject=Inquiry:%20Ultra%20Plan%20($240)%20-%20SaaS%20MVP%20/%20Full-Stack&body=Hi%20Hardik,%0A%0AI%20would%20like%20to%20get%20started%20with%20your%20Ultra%20Plan%20($240).%0A%0AProject%20Details:%0A-%20Startup%20/%20SaaS%20/%20Product%20Name:%0A-%20Core%20Features%20(Auth,%20Database,%20Payments,%20AI%20Chatbot):%0A-%20Target%20Launch%20Timeline:%0A-%20Overview%20of%20Requirements:%0A%0ALooking%20forward%20to%20hearing%20from%20you!" class="btn btn-medium btn-transparent-dark-gray btn-rounded fw-600 w-100 text-center btn-3d-push">
                                             Choose Ultra Plan
                                         </a>
                                     </div>
@@ -1211,9 +1256,9 @@
           });
         </script>
 
-        <!-- Floating Quick-Hire CTA (CRO) -->
+        <!-- Floating Quick-Hire CTA (CRO with 3D Depth) -->
         <div class="position-fixed bottom-0 end-0 m-4 z-index-999 d-none d-sm-block">
-            <a href="#contact" class="btn btn-small btn-rounded fw-700 shadow-lg text-white px-3 py-2 d-flex align-items-center" style="background-color: #0f766e; border: 2px solid #ffffff; box-shadow: 0 10px 25px rgba(15, 118, 110, 0.35);">
+            <a href="#contact" class="btn btn-small btn-rounded fw-700 shadow-lg text-white px-3 py-2 d-flex align-items-center btn-3d-push" style="background-color: #0f766e; border: 2px solid #ffffff; box-shadow: 0 10px 25px rgba(15, 118, 110, 0.35);">
                 <span style="width: 8px; height: 8px; background: #34d399; border-radius: 50%; display: inline-block; margin-right: 8px; box-shadow: 0 0 8px #34d399;"></span> Available for Work &rarr;
             </a>
         </div>
