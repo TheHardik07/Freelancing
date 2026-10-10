@@ -19,7 +19,14 @@
   <!-- Enterprise & High-Ticket Commercial Solutions -->
   <url>
     <loc>https://www.hardikrathod.me/services.html</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://www.hardikrathod.me/ai-ml-data-science.html</loc>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
